@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bai 1</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet">
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-3 col-md-6">
+						<form>
+						  <div class="form-group">
+						    <label for="formGroupExampleInput">Sinh</label>
+						    <input type="number" class="form-control" id="sinh" placeholder="">
+						  </div>
+						  <div class="form-group">
+						    <label for="formGroupExampleInput2">Ly</label>
+						    <input type="number" class="form-control" id="ly" placeholder="">
+						  </div>
+						  <div class="form-group">
+						    <label for="formGroupExampleInput2">Hoa</label>
+						    <input type="number" class="form-control" id="hoa" placeholder="">
+						  </div>
+						  <div class="form-group">
+						  	<button type="button" class="btn btn-success" onClick="Average(document.getElementById('sinh').value,document.getElementById('ly').value,document.getElementById('hoa').value)">Submit</button>
+						  	<p id="average"></p>
+						  	<p id="total"></p>
+						  </div>
+						</form>
+				</div>
+			</div>
+		</div>
+		<script>
+			function Average(_a,_b,_c){
+				a = parseInt(_a),
+				b = parseInt(_b),
+				c = parseInt(_c),
+				average = (a+b+c)/3
+				total = a+b+c
+
+				//console.log(average)
+
+				document.getElementById('average').innerHTML = "Diem trung binh la : "+average
+				document.getElementById('total').innerHTML = "Tong diem la : "+total
+
+			}
+		</script>
+   	
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	</body>
+</html>
